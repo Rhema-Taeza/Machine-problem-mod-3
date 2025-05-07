@@ -1,0 +1,29 @@
+def ctof (n1):
+    return ((n1 * 9/5) + 32)
+
+def ftoc (n2):
+    return ((n2 - 32) * 5/9)
+
+
+def conv():
+    while True:
+        print ("\nTemperature converter")
+        print ("1. Celsius to Fahrenheit")
+        print ("2. Fahrenheit to Celsius")
+        print ("3. Exit")
+
+        choice = input ("Enter your choice (1-5): ")
+
+        if choice == "1": 
+            n1 = int (input("Enter temperature in Celsius: "))
+            print ("Temperature in Fahrenheit:", ctof(n1))
+        elif choice == "2":
+            n2 = int (input("Enter temperature in Fahrenheit: "))
+            print ("Temperature in Celsius:", ftoc(n2))            
+        elif choice == "3":
+            print ("Program exiting...")
+            break
+        else:
+            print ("invalid choice, try again")
+
+conv()
