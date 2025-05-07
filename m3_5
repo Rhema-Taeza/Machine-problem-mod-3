@@ -1,0 +1,35 @@
+def main ():
+    scores = []
+
+    while True:
+        print ("\n -- Student grade menu --")
+        print ("1. Add score")
+        print ("2. Calculate average")
+        print ("3. Exit")
+
+        choice = input ("Enter your choice:")
+
+        if choice == "1":
+            try:
+                score = float (input("Enter the score:"))
+                if 0 <= score <= 100:
+                    scores.append(score)
+                    print ("Score added successfully!")
+                else:
+                    print ("Score should be 1-100")
+            except ValueError:
+                print ("Invalid input.")
+        if choice == "2":
+            if scores:
+                average = sum(scores) /len(scores)
+                print (f"Average score: {average:.2f}")
+            else: 
+                print ("No scores have been added")
+        elif choice == "3":
+            print("Exiting the To-Do List.")
+            break
+
+        else:
+            print("Invalid choice. Please try again")
+
+main()
